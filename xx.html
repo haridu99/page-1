@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .car-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .car-item {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .car-item h3 {
+      margin-top: 0;
+    }
+    .booking-form input[type="text"],
+    .booking-form input[type="date"],
+    .booking-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .booking-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .support-section {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Car Rental Service</h1>
+  </div>
+  <div class="container">
+    <h2>Available Cars</h2>
+    <ul class="car-list">
+      <li class="car-item">
+        <h3>Car Model 1</h3>
+        <p>Year: 2022</p>
+        <p>Engine Capacity: 2.0L</p>
+        <p>Location: City A</p>
+        <button onclick="openBookingForm('Car Model 1')">Book Now</button>
+      </li>
+      <li class="car-item">
+        <h3>Car Model 2</h3>
+        <p>Year: 2021</p>
+        <p>Engine Capacity: 1.8L</p>
+        <p>Location: City B</p>
+        <button onclick="openBookingForm('Car Model 2')">Book Now</button>
+      </li>
+    </ul>
+
+    <div id="booking-form-container" style="display: none;">
+      <h2>Booking Form</h2>
+      <form class="booking-form" onsubmit="submitBookingForm(event)">
+        <input type="hidden" id="selected-car-model" value="">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="email" placeholder="Email" required>
+        <input type="date" id="pickup-date" required>
+        <textarea id="additional-comments
